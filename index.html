@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peso desOrbital</title>
+    <style type="text/css">
+        body {
+            background-color: #67dbab;
+            color: black;
+            font-family: Helvetica;
+        }
+    </style>
+</head>
+<body>
+    <h1>Averigua tu peso en otro planeta</h1>
+    <p>Quisieras aprender cual es tu peso en otro planeta?</p>
+    <p>Por el momento solo contamos con <strong>Marte </strong>y <strong>Jupiter</strong>.</p>
+
+    <script>
+        var p_usuario = prompt("Cual es tu peso? ");
+        var g_usuario = parseInt(prompt("En que planeta?\n1:Marte  2:Jupiter"));
+        var peso = parseFloat(p_usuario);
+        var g_tierra = 9.8;
+        var g_marte = 3.7;
+        var g_jupiter = 24.8;
+        var planeta;
+        var peso_final;
+        if (g_usuario == 1){
+            g_usuario = g_marte;
+            planeta = "Marte";
+        }
+        else{
+            g_usuario = g_jupiter;
+            planeta = "Jupiter";
+        }
+        peso_final = peso * g_usuario / g_tierra;
+        document.write("Tu peso en " + planeta + " es: <strong>" + peso_final.toFixed(2) + " Kilos</strong>");
+    </script>
+
+</body>
+</html>
